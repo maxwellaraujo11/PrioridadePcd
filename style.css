@@ -1,0 +1,255 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    height: 100%;
+    background-color: #8A2BE2;
+  }
+  
+  .section-enviado {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: confirm 1s forwards;
+    filter: blur(15px);
+  }
+  
+  @keyframes confirm {
+    to {
+      top: 45%; /* move para a posição superior 0 (dentro do contêiner) */
+      filter: blur(0px);
+    }
+  }
+  
+  .FormEnviado-title {
+    font-size: 2rem;
+    color: #f8f8f8;
+    text-align: center;
+  }
+  
+  .buttoncontentmain {
+    display: block;
+    margin: 20px auto;
+    width: 150px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color:#820327;
+    font-size: 1.2rem;
+    box-shadow: none;
+    border: '#000' 1px solid;
+    color: #f8f8f8;
+    margin-bottom: 30px;
+    text-decoration: none;
+  
+  }
+  
+  @keyframes anime-button {
+    0% {
+      transform: scale(1);
+    } 
+    100% {
+      transform: scale(1.05);
+    }
+  }
+  
+  .buttoncontentmain:hover {
+    color: #f8f8f8;
+    background-color: #c30606;
+    transition: 0.9s;
+    animation-name: anime-button;
+    animation-duration: .5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  
+  
+  /* --------------------------------------START IN THE MAIN ------------------------------*/
+  
+  
+  main {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding-top: 40px;
+  }
+  
+
+  .title {
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    color: #f9f9f9;
+  }
+
+  .title h1 {
+    position: relative;
+    left: -3%;
+    color: #f9f9f9;
+  }
+
+
+  .box-forms {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    
+  }
+  
+  
+  .form-contact {
+    width: 330px;
+    text-align:justify;
+    padding-inline: 10px;
+    border: #000 1px solid;
+    padding: 10px 0 10px 10px;
+    border-radius: 10px;
+  }
+  
+  .img-aside {
+    width: 40%;
+    height: 400px;
+  }
+  
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .form input {
+    width: 300px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    border-bottom: #000 solid 1px;
+    font-size: 15px;
+    color: #f8f8f8;
+    padding-left: 10px;
+    outline: none;
+  }
+  
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  .form label {
+    color: #f8f8f8;
+  }
+  
+  ::placeholder {
+    color: #ffffffa0;
+  }
+  
+  .form textarea {
+    width: 300px;
+    height: 100px;
+    background-color: transparent;
+    border: #000 solid 1px;
+    font-size: 15px;
+    color: #f8f8f8;
+    padding: 5px 0 0 10px;
+    border-radius: 8px;
+    outline: none;
+    resize: none;
+  }
+  
+  .btn-enviar {
+    width: 150px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: #820327;
+    font-size: 1.2rem;
+    box-shadow: none;
+    border: #000 1px solid;
+    color: #f8f8f8;
+    cursor: pointer;
+  }
+  
+  .btn-enviar:hover {
+    color: #f8f8f8;
+    background-color: #c30606;
+  }
+  
+  
+  /*---------------------------- START THE FORM OF THE WORK WITH US -------------*/
+  
+  
+  .form select {
+    width: 300px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    border-bottom: #000 solid 1px;
+    font-size: 15px;
+    color: #f8f8f8;
+    padding-left: 10px;
+    outline: none;
+  }
+  
+  option {
+    width: 300px;
+    background-color: #820327;
+    border-bottom: #000 solid 2px;
+    font-size: 15px;
+    color: #f8f8f8;
+    padding-left: 10px;
+  }
+
+  
+  /* ---------------------- RESPONSIVIDADE --------------------------*/ 
+  
+  
+  @media (min-width: 320px) and (max-width: 727px) {
+    main {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-top: 40px;
+      }
+      
+    
+      .title {
+        text-align: center;
+      }
+    
+      .title h1 {
+        text-align: center;
+      }
+    
+    
+      .box-forms {
+        width: 100%;
+        margin-bottom: 40px;
+        display: flex;
+        flex-direction: column-reverse;
+      }
+      
+      
+      .form-contact {
+        margin: 0 auto;
+      }
+      
+      .img-aside {
+        margin: 0 auto;
+        width: 80%;
+        height: 300px;
+        top: 0;
+        margin-bottom: 40px;
+      }
+    }
+  
